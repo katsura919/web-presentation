@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -5,56 +7,34 @@ import { Star } from "lucide-react";
 
 export default function HeroSection() {
     return (
-        <section className='bg-slate-950 text-white  h-screen  w-full grid place-content-center sticky top-0'>
+        <section className='bg-[#1F1642] text-white  h-screen  w-full grid place-content-center sticky top-0'>
             <div className="absolute inset-0 w-full h-full pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] opacity-60" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] opacity-40" />
             </div>
 
             <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center space-y-8 max-w-5xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="inline-flex items-center space-x-2 bg-primary/5 text-primary px-6 py-2 rounded-full text-sm font-medium border border-primary/10 backdrop-blur-sm tracking-wide"
-                >
-                    <Star className="w-4 h-4 fill-primary" />
-                    <span>The Authority Launchpad</span>
-                </motion.div>
+
 
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground font-serif leading-[1.1]"
+                    className="text-6xl md:text-8xl lg:text-9xl font-anton tracking-wide uppercase text-[#F3E5D4] leading-[0.9]"
                 >
-                    From Invisible Agent to <br />
-                    <span className="text-primary italic">Industry Authority</span>
+                    The Brand <br />
+                    <span className="text-[#FF6B6B]">Kick Off</span>
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-xl md:text-2xl text-muted-foreground max-w-3xl leading-relaxed font-light"
+                    className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed font-light font-sans"
                 >
-                    We help insurance agents build trust, generate consistent conversations, and fully delegate follow-ups using branding, automation, and an Executive Assistant.
+                    We don't just give you a VA, we give you a Brand Architect. For $999, we audit your brand, spice up your socials, and hand you a GHL account fully loaded, all included in your 10 hours of monthly support.
                 </motion.p>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="flex flex-col sm:flex-row gap-6 w-full justify-center pt-4"
-                >
-                    <Button size="lg" className="text-lg h-14 px-10 bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 rounded-full transition-all hover:scale-105">
-                        See the 3-Stage Growth Path
-                        <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                    <Button size="lg" variant="outline" className="text-lg h-14 px-10 border-2 rounded-full hover:bg-secondary/5 hover:text-secondary hover:border-secondary transition-all">
-                        Find Your Stage
-                    </Button>
-                </motion.div>
             </div>
         </section>
     );

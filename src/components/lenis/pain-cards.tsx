@@ -53,16 +53,16 @@ export default function PainCards() {
     return (
         <>
             <div className='wrapper'>
-                <section className='text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0'>
+                <section className='text-white  h-screen  w-full bg-[#C5ECDE]  grid place-content-center sticky top-0'>
                     <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[54px_54px] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
 
-                    <h1 className='2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
-                        Why This Isn’t Working Yet
+                    <h1 className='2xl:text-7xl text-5xl px-8 text-center tracking-tight font-anton tracking-wide uppercase leading-[0.9]'>
+                        Why This Fits Your Needs
                     </h1>
                 </section>
             </div>
 
-            <section className='text-white w-full bg-slate-950 relative'>
+            <section className='text-white w-full bg-[#C5ECDE] relative'>
                 <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[54px_54px] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
                 <div className='wrapper'></div>
                 <div className='flex justify-center gap-40 px-16'>
@@ -75,12 +75,12 @@ export default function PainCards() {
                                 >
                                     <article
                                         className={`${index === 0
-                                                ? 'bg-green-500 rotate-6'
-                                                : index === 1
-                                                    ? 'bg-red-400'
-                                                    : index === 2
-                                                        ? 'bg-orange-400  -rotate-6'
-                                                        : 'bg-blue-400'
+                                            ? 'bg-green-500 rotate-6'
+                                            : index === 1
+                                                ? 'bg-red-400'
+                                                : index === 2
+                                                    ? 'bg-orange-400  -rotate-6'
+                                                    : 'bg-blue-400'
                                             } h-72 w-[35rem] rounded-lg p-6 grid grid-cols-2 gap-4 relative overflow-hidden`}
                                     >
                                         <div className='flex flex-col justify-center'>
@@ -98,8 +98,8 @@ export default function PainCards() {
                         })}
                     </div>
                     <div className='sticky top-0 h-screen grid place-content-center'>
-                        <h1 className='text-4xl px-8 font-medium text-center tracking-tight leading-[120%]'>
-                            Why This Isn’t Working Yet
+                        <h1 className='text-4xl px-8 font-anton font-bold tracking-wide uppercase text-black leading-[0.9]'>
+                            The Problem
                         </h1>
                     </div>
                 </div>
