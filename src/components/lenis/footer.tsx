@@ -8,7 +8,7 @@ export function Footer() {
     };
 
     return (
-        <footer className="bg-[#150F2E] text-[#F3E5D4]/60 py-12 border-t border-[#F3E5D4]/10">
+        <footer className="bg-[#150F2E] text-[#F3E5D4]/60 py-12 border-t border-[#F3E5D4]/10 relative z-50">
             <div className="container px-4 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="text-sm font-medium">
                     &copy; {new Date().getFullYear()} Agency Success Path. All rights reserved.
