@@ -30,7 +30,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed font-light font-sans"
+                    className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed font-light font-jost"
                 >
                     We don't just give you a VA, we give you a Brand Architect. For $999, we audit your brand, spice up your socials, and hand you a GHL account fully loaded, all included in your 10 hours of monthly support.
                 </motion.p>

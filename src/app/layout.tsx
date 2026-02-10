@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato, Anton } from "next/font/google";
+import { Playfair_Display, Lato, Anton, Jost } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -22,6 +22,12 @@ const anton = Anton({
   display: "swap",
 });
 
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Agency Success Path",
   description: "From Invisible Agent to Industry Authority",
@@ -35,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${lato.variable} ${anton.variable} antialiased font-sans`}
+        className={`${playfair.variable} ${lato.variable} ${anton.variable} ${jost.variable} antialiased font-sans`}
       >
         {children}
       </body>
