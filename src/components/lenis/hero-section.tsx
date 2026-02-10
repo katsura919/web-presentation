@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { Star } from "lucide-react";
 
 export default function HeroSection() {
-        return (
-            <section className='bg-white text-white  h-screen  w-full grid place-content-center sticky top-0'>
-                     <div className="absolute inset-0 w-full h-full pointer-events-none">
+    return (
+        <section className='bg-slate-950 text-white  h-screen  w-full grid place-content-center sticky top-0'>
+            <div className="absolute inset-0 w-full h-full pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] opacity-60" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] opacity-40" />
             </div>
@@ -56,7 +56,7 @@ export default function HeroSection() {
                     </Button>
                 </motion.div>
             </div>
-                </section>
-        );
+        </section>
+    );
 
 }

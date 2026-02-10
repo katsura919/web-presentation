@@ -3,6 +3,9 @@ import { ReactLenis } from 'lenis/react';
 import HeroSection from '@/components/lenis/hero-section';
 import PainSection from '@/components/lenis/pain-section';
 import PainCards from '@/components/lenis/pain-cards';
+import Reframe from '@/components/lenis/reframe-section';
+import StagesSection from '@/components/lenis/stages-section';
+import PricingSection from '@/components/lenis/pricing-section';
 
 export default function index() {
   return (
@@ -10,17 +13,12 @@ export default function index() {
       <main className='bg-black'>
         <div className='wrapper'>
           <HeroSection />
-
-
           <PainCards />
-          <section className='text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0'>
-            <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[54px_54px] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
-            <h1 className='2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
-              Don't Forget To Share <br /> This Sticky CSS Tricks.😎
-            </h1>
-          </section>
+          <Reframe />
+          <StagesSection />
+          <PricingSection />
         </div>
-
+        {/* 
         <section className='text-white   w-full bg-slate-950  '>
           <div className='grid grid-cols-2'>
             <div className='sticky top-0 h-screen flex items-center justify-center'>
@@ -108,7 +106,7 @@ export default function index() {
           <section className='bg-black h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full'>
             Thanks for Scrolling
           </section>
-        </footer>
+        </footer> */}
       </main>
     </ReactLenis>
   );
