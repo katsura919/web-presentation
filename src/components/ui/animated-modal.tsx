@@ -77,7 +77,7 @@ export const ModalBody = ({
     }
   }, [open]);
 
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement>(null);
   const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
 
@@ -90,15 +90,15 @@ export const ModalBody = ({
           }}
           animate={{
             opacity: 1,
-           
+
           }}
           exit={{
             opacity: 0,
-     
+
           }}
           className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center z-50"
         >
-         
+
 
           <motion.div
             ref={modalRef}
@@ -220,7 +220,7 @@ const CloseIcon = () => {
 // Hook to detect clicks outside of a component.
 // Add it in a separate file, I've added here for simplicity
 export const useOutsideClick = (
-  ref: React.RefObject<HTMLDivElement>,
+  ref: React.RefObject<HTMLDivElement | null>,
   callback: Function
 ) => {
   useEffect(() => {
