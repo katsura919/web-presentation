@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SparklesCore } from '@/components/ui/sparkles';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,37 +76,76 @@ export default function PainPointsSection() {
     ];
 
     return (
-        <section ref={sectionRef} className="h-screen overflow-hidden bg-transparent">
+        <section ref={sectionRef} className="h-screen overflow-hidden relative">
             <div ref={containerRef} className="flex h-full">
                 {painPoints.map((pain, index) => (
                     <div
                         key={index}
-                        className="pain-panel w-screen h-screen flex-shrink-0 flex items-center justify-center overflow-hidden relative text-white"
+                        className="pain-panel w-screen h-screen flex-shrink-0 flex items-center justify-center overflow-hidden relative"
                     >
-                        {/* Glassmorphism Container */}
-                        <div className="bg-transparent container max-w-5xl mx-auto px-6 md:px-8 py-20 relative z-20">
+                        {/* Conditional Solid Backgrounds */}
+                        {index === 0 && (
+                            // Panel 1: Solid Black
+                            <div className="absolute inset-0 bg-black z-0" />
+                        )}
+                        {index === 1 && (
+                            // Panel 2: Solid White
+                            <div className="absolute inset-0 bg-white z-0" />
+                        )}
+                        {index === 2 && (
+                            // Panel 3: Solid Black
+                            <div className="absolute inset-0 bg-black z-0" />
+                        )}
+
+                        {/* Sparkles - White for black bg, Black for white bg */}
+                        <div className="absolute inset-0 z-0">
+                            <SparklesCore
+                                id={`pain-sparkles-${index}`}
+                                background="transparent"
+                                minSize={0.4}
+                                maxSize={1.0}
+                                particleDensity={15}
+                                className="w-full h-full"
+                                particleColor={index === 1 ? "#000000" : "#FFFFFF"}
+                            />
+                        </div>
+
+                        {/* Content */}
+                        <div className="relative z-10 container max-w-6xl mx-auto px-6 md:px-8 py-20">
                             {index === 0 ? (
-                                // Intro Panel
-                                <div className="bg-white/[0.02] backdrop-blur-2xl rounded-3xl p-12 md:p-16 border border-white/5 shadow-2xl text-center space-y-8">
-                                    <h2 className="text-6xl md:text-7xl font-bold mb-6 font-anton uppercase tracking-wide">{pain.title}</h2>
-                                    <p className="text-2xl md:text-3xl font-light opacity-90 font-jost">{pain.subtitle}</p>
-                                    <p className="text-xl md:text-2xl leading-relaxed mt-8 font-jost opacity-80 max-w-3xl mx-auto">{pain.summary}</p>
+                                // Intro Panel - Footer Style
+                                <div className="text-center">
+                                    <h2 className="text-6xl md:text-8xl lg:text-9xl font-anton uppercase leading-none mb-6">
+                                        <span className="text-black">{pain.title}</span>
+                                    </h2>
+                                    <p className="text-4xl md:text-6xl font-anton uppercase text-black leading-tight mb-8">
+                                        {pain.subtitle}
+                                    </p>
+                                    <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-sans">
+                                        {pain.summary}
+                                    </p>
                                 </div>
                             ) : (
-                                // Pain Point Panels
-                                <div className="bg-white/[0.02] backdrop-blur-2xl rounded-3xl p-10 md:p-14 border border-white/5 shadow-2xl space-y-8">
-                                    <div className="text-center mb-8">
-                                        <h3 className="text-4xl md:text-5xl font-bold mb-3 font-anton uppercase tracking-wide">{pain.title}</h3>
-                                        <p className="text-xl md:text-2xl opacity-90 font-jost mb-4">{pain.subtitle}</p>
-                                        <p className="text-lg md:text-xl opacity-75 font-jost italic max-w-2xl mx-auto">{pain.summary}</p>
+                                // Pain Point Panels - Footer Style
+                                <div className="space-y-12">
+                                    <div className="text-center mb-12">
+                                        <h3 className="text-5xl md:text-7xl lg:text-8xl font-anton uppercase leading-none mb-6">
+                                            <span className="text-black">{pain.title}</span>
+                                        </h3>
+                                        <p className="text-3xl md:text-5xl font-anton uppercase text-black leading-tight mb-6">
+                                            {pain.subtitle}
+                                        </p>
+                                        <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto font-sans italic">
+                                            {pain.summary}
+                                        </p>
                                     </div>
-                                    <div className="grid md:grid-cols-2 gap-4">
+
+                                    {/* Pain Points List */}
+                                    <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                                         {pain.points?.map((point, idx) => (
-                                            <div key={idx} className="bg-white/[0.05] backdrop-blur-md rounded-xl p-5 border border-white/10 hover:bg-white/[0.08] hover:border-cyan-500/20 transition-all group">
-                                                <div className="flex items-start gap-3">
-                                                    <span className="text-cyan-500 text-xl mt-1 group-hover:scale-110 transition-transform">•</span>
-                                                    <p className="text-sm md:text-base leading-relaxed font-jost">{point}</p>
-                                                </div>
+                                            <div key={idx} className="flex items-start gap-4 p-6 bg-black/5 rounded-2xl border border-black/10 hover:bg-black/10 transition-all">
+                                                <span className="text-cyan-500 text-2xl font-bold mt-1">•</span>
+                                                <p className="text-base md:text-lg text-black leading-relaxed font-sans">{point}</p>
                                             </div>
                                         ))}
                                     </div>
