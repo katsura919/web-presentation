@@ -12,28 +12,23 @@ export default function StagesSection() {
                         <div className="p-3 bg-[#FF6B6B]/10 rounded-full text-[#FF6B6B]">
                             <CheckCircle2 className="w-6 h-6" />
                         </div>
-                        <span className="text-xl font-medium text-[#F3E5D4]">The Authority Starter</span>
+                        <span className="text-xl font-medium text-[#F3E5D4]">Personal Branding & Digital Infrastructure</span>
                     </div>
 
                     <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 shadow-sm">
-                        <h4 className="font-serif text-lg font-bold mb-4 text-[#FF6B6B]">Focus: Personal Branding</h4>
-                        <ul className="space-y-3 mb-6">
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                Brand Brand audit (profiles, messaging, positioning)
-                            </li>
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                30-day social content strategy
-                            </li>
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                GHL set up and ready
-                            </li>
-                        </ul>
+                        <h4 className="font-serif text-lg font-bold mb-4 text-[#FF6B6B]">The Process</h4>
+                        <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+                            We stop the "Commodity Trap" by auditing your digital presence. We move you from a generic corporate look to a high-level executive brand. We set up your professional ecosystem (CRM) so you have a solid foundation to receive leads.
+                        </p>
+
                         <div className="pt-4 border-t border-white/10">
-                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">Result</span>
-                            <p className="font-medium text-lg text-[#F3E5D4]">TRUST: People see you as a credible expert.</p>
+                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">The Focus</span>
+                            <p className="font-medium text-base text-gray-300 mb-4">Personal Branding & Digital Infrastructure</p>
+
+                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">The Result</span>
+                            <p className="font-medium text-lg text-[#F3E5D4]">
+                                <strong>TRUST.</strong> Prospects no longer see you as just another agent; they see you as a credible, elite expert before the first meeting.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -47,28 +42,26 @@ export default function StagesSection() {
                         <div className="p-3 bg-[#FF6B6B]/10 rounded-full text-[#FF6B6B]">
                             <TrendingUp className="w-6 h-6" />
                         </div>
-                        <span className="text-xl font-medium text-[#F3E5D4]">The Growth Partner</span>
+                        <span className="text-xl font-medium text-[#F3E5D4]">Conversations & Automated Follow-ups</span>
                     </div>
 
                     <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 shadow-sm">
-                        <h4 className="font-serif text-lg font-bold mb-4 text-[#FF6B6B]">Focus: Conversations & Follow-ups</h4>
-                        <ul className="space-y-3 mb-6">
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                FlowChat outreach starts conversations
-                            </li>
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                GHL NurtureWise handles follow-ups
-                            </li>
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                Monthly performance reports
-                            </li>
-                        </ul>
+                        <h4 className="font-serif text-lg font-bold mb-4 text-[#FF6B6B]">The Process</h4>
+                        <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
+                            Once your brand is trusted, we turn on the outreach. Our proactive system identifies your ideal clients on social platforms and starts the conversation for you. Our automation handles the follow-ups so you never lose a lead to "speed-to-lead" issues.
+                        </p>
+                        <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 italic">
+                            Our system can get 25+ quality leads per month.
+                        </p>
+
                         <div className="pt-4 border-t border-white/10">
-                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">Result</span>
-                            <p className="font-medium text-lg text-[#F3E5D4]">CONSISTENT LEADS: Pipeline stays full without manual chasing.</p>
+                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">The Focus</span>
+                            <p className="font-medium text-base text-gray-300 mb-4">Conversations & Automated Follow-ups</p>
+
+                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">The Result</span>
+                            <p className="font-medium text-lg text-[#F3E5D4]">
+                                <strong>CONSISTENT LEADS.</strong> Your pipeline stays full with "warm" starts, removing the need for manual chasing or cold calling.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -82,31 +75,26 @@ export default function StagesSection() {
                         <div className="p-3 bg-[#FF6B6B]/10 rounded-full text-[#FF6B6B]">
                             <Crown className="w-6 h-6" />
                         </div>
-                        <span className="text-xl font-medium text-[#F3E5D4]">The Executive Assistant</span>
+                        <span className="text-xl font-medium text-[#F3E5D4]">Full Delegation & Executive Management</span>
                     </div>
 
                     <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 shadow-sm relative overflow-hidden">
                         {/* Gold shine effect */}
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF6B6B]/10 rounded-full blur-3xl -mr-10 -mt-10" />
 
-                        <h4 className="font-serif text-lg font-bold mb-4 relative z-10 text-[#FF6B6B]">Focus: Full Delegation</h4>
-                        <ul className="space-y-3 mb-6 relative z-10">
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                Dedicated Executive Assistant (40 hrs/week)
-                            </li>
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                VA manages brand, outreach, and CRM
-                            </li>
-                            <li className="flex items-start gap-2 text-gray-300 text-sm md:text-base">
-                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF6B6B] shrink-0" />
-                                You only show up to appointments
-                            </li>
-                        </ul>
+                        <h4 className="font-serif text-lg font-bold mb-4 relative z-10 text-[#FF6B6B]">The Process</h4>
+                        <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 relative z-10">
+                            We move you into full-scale delegation. A dedicated partner takes over the daily management of your brand, your outreach, and your CRM. You transition from "working in the business" to "leading the business".
+                        </p>
+
                         <div className="pt-4 border-t border-white/10 relative z-10">
-                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">Result</span>
-                            <p className="font-medium text-lg text-[#F3E5D4]">TOTAL FREEDOM: You operate as the CEO, not the secretary.</p>
+                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">The Focus</span>
+                            <p className="font-medium text-base text-gray-300 mb-4">Full Delegation & Executive Management</p>
+
+                            <span className="text-xs uppercase font-bold text-[#FF6B6B] block mb-1">The Result</span>
+                            <p className="font-medium text-lg text-[#F3E5D4]">
+                                <strong>TOTAL FREEDOM.</strong> You operate exclusively as the CEO. You stop hunting for business and spend your time only on high-value closing appointments.
+                            </p>
                         </div>
                     </div>
                 </div>

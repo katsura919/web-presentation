@@ -1,5 +1,7 @@
 import { ReactLenis } from 'lenis/react';
 import HeroSection from '@/components/lenis/hero-section';
+import IntroSection from '@/components/lenis/intro-section';
+import PainPointsSection from '@/components/lenis/horizontal-scroll';
 import PainSection from '@/components/lenis/pain-section';
 import PainCards from '@/components/lenis/pain-cards';
 import Reframe from '@/components/lenis/reframe-section';
@@ -14,7 +16,9 @@ export default function index() {
       <main className='bg-background'>
         <div className='wrapper'>
           <HeroSection />
-          <PainCards />
+          <IntroSection />
+          <PainPointsSection />
+          {/* <PainCards /> */}
           <Reframe />
           <StagesSection />
           <PricingSection />

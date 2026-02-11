@@ -22,18 +22,11 @@ export default function HeroSection() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-6xl md:text-8xl lg:text-9xl font-anton tracking-wide uppercase text-[#F3E5D4] leading-[0.9]"
                 >
-                    The Brand <br />
-                    <span className="text-[#FF6B6B]">Kick Off</span>
+                    The Intro: <br />
+                    <span className="text-[#FF6B6B]">Setting the Standard</span>
                 </motion.h1>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed font-light font-jost"
-                >
-                    We don't just give you a VA, we give you a Brand Architect. For $999, we audit your brand, spice up your socials, and hand you a GHL account fully loaded, all included in your 10 hours of monthly support.
-                </motion.p>
+
 
             </div>
         </section>
