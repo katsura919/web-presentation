@@ -75,7 +75,7 @@ export default function PainPointsSection() {
     ];
 
     return (
-        <section ref={sectionRef} className="h-screen overflow-hidden bg-white">
+        <section ref={sectionRef} className="h-screen overflow-hidden bg-transparent">
             <div ref={containerRef} className="flex h-full">
                 {painPoints.map((pain, index) => (
                     <div

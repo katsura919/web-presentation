@@ -66,7 +66,7 @@ export default function BrandingRevampSection() {
                     </div>
 
                     {/* Platforms Showcase */}
-                    <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-12 border border-white/10 mb-12">
+                    <div className="bg-transparent rounded-3xl p-12 mb-12">
                         <h3 className="text-3xl font-anton uppercase text-white mb-8 text-center">Optimized For</h3>
                         <div className="flex justify-center gap-12">
                             {platforms.map((platform, index) => (

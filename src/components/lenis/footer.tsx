@@ -1,7 +1,7 @@
 "use client";
 
 import { SparklesCore } from "@/components/ui/sparkles";
-import { Instagram, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowUp, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 
 export function Footer() {
     const scrollToTop = () => {
@@ -74,6 +74,15 @@ export function Footer() {
                             </a>
                         ))}
                     </div>
+
+                    {/* Back to Top Button */}
+                    <button
+                        onClick={scrollToTop}
+                        className="flex items-center gap-2 text-black hover:text-cyan-500 transition-colors uppercase text-sm font-bold tracking-wide group"
+                    >
+                        <span>Back to Top</span>
+                        <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+                    </button>
 
                     {/* Copyright */}
                     <div className="text-sm font-medium text-black/60 uppercase tracking-wide">

@@ -69,7 +69,7 @@ export default function SystemAccessSection() {
                     </div>
 
                     {/* System Features List */}
-                    <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-12 border border-white/10 mb-12">
+                    <div className="bg-transparent rounded-3xl p-12  mb-12">
                         <div className="flex items-center gap-3 mb-8">
                             <Settings className="w-8 h-8 text-purple-400" />
                             <h3 className="text-3xl font-anton uppercase text-white">What's Included</h3>

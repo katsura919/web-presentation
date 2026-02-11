@@ -15,7 +15,7 @@ export default function HeroSection() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-6xl md:text-8xl lg:text-9xl font-anton tracking-wide uppercase text-white leading-[0.9]"
                 >
-                    TalentMucho: <br />
+                    Talent Mucho: <br />
                     <span className="text-cyan-500">Setting the Standard</span>
                 </motion.h1>
             </div>
