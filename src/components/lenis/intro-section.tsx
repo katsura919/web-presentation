@@ -6,11 +6,7 @@ export default function IntroSection() {
     return (
         <>
             {/* First Paragraph Section */}
-            <section className='bg-[#16421f] text-white min-h-screen w-full flex items-center justify-center py-20 relative'>
-                <div className="absolute inset-0 w-full h-full pointer-events-none">
-                    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] opacity-60" />
-                </div>
-
+            <section className='bg-transparent text-white min-h-screen w-full flex items-center justify-center py-20 relative'>
                 <div className="container relative z-10 px-4 md:px-6 flex items-center justify-center max-w-8xl mx-auto">
                     <TextAnimation
                         as='p'
@@ -21,7 +17,7 @@ export default function IntroSection() {
                                 filter: 'blur(0px)',
                                 opacity: 1,
                                 y: 0,
-                                transition: { ease: 'linear', duration: 0.6 },
+                                transition: { ease: 'linear', duration: 0.3 },
                             },
                         }}
                         classname='text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-3xl leading-relaxed font-light font-jost text-center'
@@ -30,11 +26,7 @@ export default function IntroSection() {
             </section>
 
             {/* Second Paragraph Section */}
-            <section className='bg-[#16421f] text-white min-h-screen w-full flex items-center justify-center py-20 relative'>
-                <div className="absolute inset-0 w-full h-full pointer-events-none">
-                    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] opacity-40" />
-                </div>
-
+            <section className='bg-transparent text-white min-h-screen w-full flex items-center justify-center py-20 relative'>
                 <div className="container relative z-10 px-4 md:px-6 flex items-center justify-center max-w-5xl mx-auto">
                     <TextAnimation
                         as='p'
@@ -45,7 +37,7 @@ export default function IntroSection() {
                                 filter: 'blur(0px)',
                                 opacity: 1,
                                 y: 0,
-                                transition: { ease: 'linear', duration: 0.6 },
+                                transition: { ease: 'linear', duration: 0.3 },
                             },
                         }}
                         classname='text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-3xl leading-relaxed font-light font-jost text-center'

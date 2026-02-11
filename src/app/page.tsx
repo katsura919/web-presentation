@@ -9,11 +9,25 @@ import StagesSection from '@/components/lenis/stages-section';
 import PricingSection from '@/components/lenis/pricing-section';
 import { FinalCTASection } from '@/components/lenis/final-cta-section';
 import { Footer } from '@/components/lenis/footer';
+import { SparklesCore } from '@/components/ui/sparkles';
 
 export default function index() {
   return (
     <ReactLenis root>
-      <main className='bg-background'>
+      {/* Global Sparkles Background */}
+      <div className="bg-[#030303] fixed inset-0 w-full h-full z-0">
+        <SparklesCore
+          id="tsparticles"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={20}
+          className="w-full h-full"
+          particleColor="#868686ff"
+        />
+      </div>
+
+      <main className='bg-transparent relative z-10'>
         <div className='wrapper'>
           <HeroSection />
           <IntroSection />

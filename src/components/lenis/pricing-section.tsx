@@ -1,5 +1,5 @@
 import { Check } from 'lucide-react';
-import { CometCard } from '@/components/ui/comet-card';
+import { BackgroundGradient } from '@/components/ui/background-gradient';
 
 export default function PricingSection() {
     const tiers = [
@@ -7,6 +7,7 @@ export default function PricingSection() {
             name: 'Authority Starter',
             hours: '10 Hours',
             support: 'weekly Support',
+            description: 'Perfect for agents ready to establish their brand and digital presence.',
             originalPrice: '$999',
             price: '$799',
             period: '/mo',
@@ -20,6 +21,7 @@ export default function PricingSection() {
             name: 'The Growth Partner',
             hours: '20 Hours',
             support: 'Weekly Support',
+            description: 'Ideal for scaling your pipeline with automated outreach and follow-ups.',
             originalPrice: '$1864',
             price: '$1,364',
             period: '/mo',
@@ -34,6 +36,7 @@ export default function PricingSection() {
             name: 'The Empire Builder',
             hours: 'Full-time',
             support: 'Dedicated EA',
+            description: 'For top producers ready to operate exclusively as the CEO.',
             originalPrice: '$2554',
             price: '$2,154',
             period: '/mo',
@@ -46,54 +49,58 @@ export default function PricingSection() {
     ];
 
     return (
-        <section className="bg-[#0a0a0a] text-white py-24 relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[54px_54px] pointer-events-none'></div>
-
-            <div className="container px-4 mx-auto relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl md:text-5xl font-anton tracking-wide uppercase font-bold mb-4">
+        <section className="bg-transparent min-h-screen text-white py-32 relative overflow-hidden flex items-center">
+            <div className="container px-4 mx-auto relative z-10 w-full">
+                {/* Header Section */}
+                <div className="text-center max-w-4xl mx-auto mb-20">
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-anton tracking-wide uppercase font-bold mb-6 leading-tight">
                         Choose Your Level of Support
                     </h2>
-                    <p className="text-white/60 text-lg italic">Every tier includes our CRM ecosystem for free.</p>
+                    <p className="text-zinc-400 text-xl md:text-2xl font-light italic">
+                        Every tier includes our CRM ecosystem for free.
+                    </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                {/* Pricing Cards */}
+                <div className="grid mt-20 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {tiers.map((tier, index) => (
-                        <CometCard key={index} className="h-full">
-                            <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 border border-zinc-800 h-full flex flex-col">
-                                {/* Header */}
-                                <div className="mb-8">
-                                    <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
-                                    <p className="text-white/60">
-                                        <span className="font-semibold text-white">{tier.hours}</span> {tier.support}
-                                    </p>
-                                </div>
+                        <BackgroundGradient key={index} containerClassName="h-full rounded-2xl">
+                            <div className="bg-black/90 backdrop-blur-xl rounded-[20px] p-8 h-full flex flex-col">
+                                {/* Title */}
+                                <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white font-anton uppercase tracking-wide text-center">{tier.name}</h3>
+
+                                {/* Description */}
+                                <p className="text-zinc-400 text-sm md:text-base mb-8 leading-relaxed text-center">
+                                    {tier.description}
+                                </p>
 
                                 {/* Features */}
-                                <div className="space-y-3 mb-8 flex-grow">
+                                <div className="space-y-4 mb-8 flex-grow">
                                     {tier.features.map((feature, idx) => (
                                         <div key={idx} className="flex items-start gap-3">
-                                            <div className="mt-1 flex-shrink-0">
-                                                <div className="w-5 h-5 rounded bg-emerald-500/20 flex items-center justify-center">
-                                                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                                                </div>
+                                            <div className="mt-0.5 flex-shrink-0">
+                                                <Check className="w-5 h-5 text-cyan-500" />
                                             </div>
-                                            <span className="text-white/80 text-sm leading-relaxed">{feature}</span>
+                                            <span className="text-zinc-300 text-sm md:text-base leading-relaxed">{feature}</span>
                                         </div>
                                     ))}
                                 </div>
 
-                                {/* Price */}
-                                <div className="pt-6 border-t border-zinc-800">
-                                    <div className="flex items-baseline gap-2 mb-2">
-                                        <span className="text-white/40 line-through text-lg">{tier.originalPrice}</span>
-                                        <span className="text-3xl font-bold">{tier.price}</span>
-                                        <span className="text-white/60">{tier.period}</span>
+                                {/* Price Section */}
+                                <div className="mt-auto pt-6 border-t border-white/10">
+                                    <div className="flex items-baseline gap-2 mb-6">
+                                        <span className="text-zinc-500 line-through text-lg">{tier.originalPrice}</span>
+                                        <span className="text-5xl font-bold text-white">{tier.price}</span>
+                                        <span className="text-zinc-400 text-xl">{tier.period}</span>
                                     </div>
+
+                                    {/* CTA Button */}
+                                    <button className="w-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold py-4 px-6 rounded-xl transition-all border border-white/20 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20">
+                                        Get Started
+                                    </button>
                                 </div>
                             </div>
-                        </CometCard>
+                        </BackgroundGradient>
                     ))}
                 </div>
             </div>
