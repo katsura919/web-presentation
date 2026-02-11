@@ -11,6 +11,9 @@ import { FinalCTASection } from '@/components/lenis/final-cta-section';
 import { Footer } from '@/components/lenis/footer';
 import { SparklesCore } from '@/components/ui/sparkles';
 import CustomWebsiteSection from '@/components/lenis/custom-website-section';
+import BrandingRevampSection from '@/components/lenis/branding-revamp-section';
+import SystemAccessSection from '@/components/lenis/system-access-section';
+
 
 export default function index() {
   return (
@@ -38,7 +41,8 @@ export default function index() {
           <StagesSection />
           <PricingSection />
           <CustomWebsiteSection />
-          <FinalCTASection />
+          <BrandingRevampSection />
+          <SystemAccessSection />
           <Footer />
         </div>
       </main>

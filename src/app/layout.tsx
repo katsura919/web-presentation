@@ -29,7 +29,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Agency Success Path",
+  title: "TalentMucho",
   description: "From Invisible Agent to Industry Authority",
 };
 

@@ -46,7 +46,7 @@ export default function StagesSection() {
                             Once your brand is trusted, we turn on the outreach. Our proactive system identifies your ideal clients on social platforms and starts the conversation for you. Our automation handles the follow-ups so you never lose a lead to "speed-to-lead" issues.
                         </p>
                         <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 italic">
-                            Our system can get 25+ quality leads per month.
+                            Our system can get 25+ quality leads per day.
                         </p>
 
                         <div className="pt-4 border-t border-white/10">

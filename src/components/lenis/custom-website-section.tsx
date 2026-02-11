@@ -147,21 +147,6 @@ export default function CustomWebsiteSection() {
 
             {/* Hero Parallax Portfolio Showcase */}
             <HeroParallax products={portfolioWebsites} />
-
-            {/* CTA Section */}
-            <div className="max-w-4xl mx-auto px-4 pb-32 text-center">
-                <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-12 border border-white/10">
-                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to Transform Your Digital Presence?
-                    </h3>
-                    <p className="text-zinc-400 text-lg mb-8">
-                        Get a website that converts visitors into clients
-                    </p>
-                    <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-12 rounded-xl transition-all text-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40">
-                        Get Your Custom Website
-                    </button>
-                </div>
-            </div>
         </section>
     );
 }
