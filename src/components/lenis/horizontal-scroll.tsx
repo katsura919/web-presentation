@@ -86,7 +86,7 @@ export default function PainPointsSection() {
                         {/* Conditional Solid Backgrounds */}
                         {index === 0 && (
                             // Panel 1: Solid Black
-                            <div className="absolute inset-0 bg-black z-0" />
+                            <div className="absolute inset-0 bg-transparent z-0" />
                         )}
                         {index === 1 && (
                             // Panel 2: Solid White
@@ -94,7 +94,7 @@ export default function PainPointsSection() {
                         )}
                         {index === 2 && (
                             // Panel 3: Solid Black
-                            <div className="absolute inset-0 bg-black z-0" />
+                            <div className="absolute inset-0 bg-transparent z-0" />
                         )}
 
                         {/* Sparkles - White for black bg, Black for white bg */}
@@ -113,20 +113,20 @@ export default function PainPointsSection() {
                         {/* Content */}
                         <div className="relative z-10 container max-w-6xl mx-auto px-6 md:px-8 py-20">
                             {index === 0 ? (
-                                // Intro Panel - Footer Style
+                                // Intro Panel - Black Background
                                 <div className="text-center">
                                     <h2 className="text-6xl md:text-8xl lg:text-9xl font-anton uppercase leading-none mb-6">
-                                        <span className="text-black">{pain.title}</span>
+                                        <span className="text-white">{pain.title}</span>
                                     </h2>
-                                    <p className="text-4xl md:text-6xl font-anton uppercase text-black leading-tight mb-8">
+                                    <p className="text-4xl md:text-6xl font-anton uppercase text-white leading-tight mb-8">
                                         {pain.subtitle}
                                     </p>
-                                    <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-sans">
+                                    <p className="text-xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto font-sans">
                                         {pain.summary}
                                     </p>
                                 </div>
-                            ) : (
-                                // Pain Point Panels - Footer Style
+                            ) : index === 1 ? (
+                                // Panel 2 - White Background
                                 <div className="space-y-12">
                                     <div className="text-center mb-12">
                                         <h3 className="text-5xl md:text-7xl lg:text-8xl font-anton uppercase leading-none mb-6">
@@ -146,6 +146,31 @@ export default function PainPointsSection() {
                                             <div key={idx} className="flex items-start gap-4 p-6 bg-black/5 rounded-2xl border border-black/10 hover:bg-black/10 transition-all">
                                                 <span className="text-cyan-500 text-2xl font-bold mt-1">•</span>
                                                 <p className="text-base md:text-lg text-black leading-relaxed font-sans">{point}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ) : (
+                                // Panel 3 - Black Background
+                                <div className="space-y-12">
+                                    <div className="text-center mb-12">
+                                        <h3 className="text-5xl md:text-7xl lg:text-8xl font-anton uppercase leading-none mb-6">
+                                            <span className="text-white">{pain.title}</span>
+                                        </h3>
+                                        <p className="text-3xl md:text-5xl font-anton uppercase text-white leading-tight mb-6">
+                                            {pain.subtitle}
+                                        </p>
+                                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto font-sans italic">
+                                            {pain.summary}
+                                        </p>
+                                    </div>
+
+                                    {/* Pain Points List */}
+                                    <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                                        {pain.points?.map((point, idx) => (
+                                            <div key={idx} className="flex items-start gap-4 p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                                                <span className="text-cyan-500 text-2xl font-bold mt-1">•</span>
+                                                <p className="text-base md:text-lg text-white leading-relaxed font-sans">{point}</p>
                                             </div>
                                         ))}
                                     </div>
